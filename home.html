@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GK Kitchens</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="html href="OrderSummary.html">
+</head>
+<body>
+    <h1>GK Kitchens</h1>
+<img src="GK_KITCHEN-removebg-preview.png" style="width: 100px; height: 100px;position: absolute; top: 2%;left: 13%;  " alt=""/>
+<div class="search-container">
+    <input type="text" id="searchInput" class="search-bar" placeholder="Search menu items..." aria-label="Search menu items">
+</div>
+    <div class="menu-grid">
+        <div class="header">Variety</div>
+        <div class="header">Dishes</div>
+        <div class="header">Item Purchased</div>
+    </div>
+    <div class="items"></div>
+    <div class="Total">
+        <h1>Total: 0 rs</h1>
+    </div>
+
+    <div class="print">
+        <button onclick="printOrder()">Print</button>
+    </div>
+
+    <div class="order-summary" >
+        
+    </div>
+    <script type="module">
+        import { renderMenu, add, changeQuantity, removeItem, printOrder } from './script.js';
+        
+        window.add = add;
+        window.changeQuantity = changeQuantity;
+        window.removeItem = removeItem;
+        window.printOrder = printOrder;
+
+        window.onload = renderMenu;
+    </script>
+    
+</body>
+</html>
